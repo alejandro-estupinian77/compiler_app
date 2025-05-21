@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compiler</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="icon" href="images/config.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Cal+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="contenido-header">
+            <img src="images/config.png" alt="Logo Compiler App">
+            <h1>Compiler</h1>
+        </div>
+    </header>
+
+    <section class="contenido-app">
+
+        <div class="contenido-archivos">
+            <div class="header-archivos">
+                <h3>Archivos</h3>
+                
+                <div class="botones-archivos">
+                    <button class="boton-archivo btn-txt"><img src="images/plus.png" alt="Agregar archivos"></button>
+                    <input type="file" id="file-input" accept=".txt">
+                </div>
+            </div>
+        </div>
+
+        <div class="contenido-editor">
+            <textarea id="editor-textarea" placeholder="Código..."></textarea>
+            <div class="botones-editor">
+                <button class="boton-editor btn-compilar">Compilar Código</button>
+                <button class="boton-editor btn-exportar">Exportar TXT</button>
+            </div>
+        </div>
+
+        <div class="contenido-output">
+            <div class="botones-output">
+                <button class="boton-output btn-tokens">Tokens</button>
+                <button class="boton-output btn-tabla">Tabla Símbolos</button>
+                <button class="boton-output btn-errores">Errores</button>
+                <button class="boton-output btn-arbol">Árbol Sintáctico</button>
+                <button class="boton-output btn-evaluador">Evaluador</button>
+            </div>
+            <div class="output-contenedor">
+                <textarea id="output" readonly placeholder="No se ha analizado ningún código..."></textarea>
+                <div class="contenedor-arbol" id="arbol"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="evaluador.js"></script>
+    <script src="abrirTxt.js"></script>
+    <script src="ExportarTxt.js"></script>
+    <script src="mostrarOutput.js"></script>
+    <script src="generarArbol.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</body>
+</html>

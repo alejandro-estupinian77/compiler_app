@@ -1,0 +1,165 @@
+/* GENERALES */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Previene el scroll global */
+}
+
+html img {
+    height: 20px;
+    width: 20px;
+    object-fit: contain; /* Evita distorsión de imágenes */
+}
+
+h1 {
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 45px;
+    margin: none;
+    padding: 0;
+}
+
+button{
+    cursor: pointer;
+}
+
+textarea{
+    background-color: #F5F5F5;
+    outline: none;
+    height: 100%;
+    width: 100%;
+    resize: none;
+}
+
+button{
+    font-family: "Manrope", sans-serif;
+    background-color: #000;
+    color: #F5F5F5;
+    border: none;
+}
+
+button:hover{
+    background-color: #1E90FF;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0; /* Añade algo de padding */
+    border: #F5F5F5;
+}
+
+.header .contenido-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.header img {
+    height: 65px;
+    width: 65px;
+}
+
+/*CONTENIDO APP*/
+.contenido-app{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    font-family: "Manrope", sans-serif;
+}
+
+.contenido-archivos{
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.15);
+    height: 100vh;
+}
+
+.header-archivos{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-archivos .botones-archivos{
+    display: flex;
+    gap: 5px;
+}
+
+.header-archivos .botones-archivos .boton-archivo{
+    background-color: #FFF;
+    outline: none;
+}
+
+.header-archivos .botones-archivos input{
+    display: none;
+}
+
+.header-archivos .botones-archivos .boton-archivo img{
+    height: 25px;
+    width: 25px;
+}
+
+.contenido-editor{
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.15);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido-editor #editor-textarea{
+    height: 78%;
+}
+
+.contenido-editor .botones-editor{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 4.5%;
+}
+
+.contenido-output{
+    height: 100vh;
+}
+
+.contenido-output #output{
+    height: 100%;
+}
+
+.contenido-output .output-contenedor{
+    height: 100%;
+}
+
+.contenido-output .botones-output{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.contenido-output .botones-output .boton-output{
+    border: none;
+    color: #FFF;
+    background-color: #000;
+    padding: 10px;
+}
+
+.contenido-output .botones-output .boton-output:hover{
+    background-color: #1E90FF;
+}
+
+.contenido-output .contenedor-arbol{
+    display: none;
+}
+
+#arbol {
+  width: 100%;
+  height: auto;
+  max-height: 1000px;
+  overflow: auto;
+  background-color: white;
+}
+
+
+/* Asegurar que los elementos hijos no causen overflow */
+* {
+    box-sizing: border-box; /* Incluye padding en el cálculo del tamaño */
+}
